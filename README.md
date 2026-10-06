@@ -1,59 +1,57 @@
-# IocAngularGestorReformesDiegoRubio
+# Nom de l'aplicació
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.1.
+Gestor de Reformes
 
-## Development server
+## Autor/a
 
-To start a local development server, run:
+Diego Rubio
 
-```bash
+## Descripció
+
+Projecte d'una aplicació per organitzar les tasques i fer el seguiment de les reformes.
+
+En aquesta primera entrega he preparat el projecte Angular i he personalitzat la pàgina inicial. Afegiré les funcionalitats de gestió en les properes unitats.
+
+## Versions utilitzades
+
+- Node.js: 24.15.0
+- npm: 11.12.1
+- Angular CLI: 22.2.1
+- Angular: 22.2.1
+- Git: 2.54.0.windows.1
+
+## Com crear i executar el projecte
+
+Comanda original de creació:
+
+```cmd
+ng new ioc-angular-gestor-reformes-diego-rubio --routing --style=scss --ssr=false --standalone=true --file-name-style-guide=2016 --skip-git=true --package-manager=npm --defaults
+```
+
+Per descarregar i executar el projecte:
+
+```cmd
+git clone --branch ra1-setup https://github.com/rubiobdiego/ioc-angular-gestor-reformes-diego-rubio.git
+cd ioc-angular-gestor-reformes-diego-rubio
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Obriu http://localhost:4200 al navegador.
 
-## Code scaffolding
+## Estat de l'EAC1
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Entorn tècnic configurat i versions comprovades.
+- Projecte creat amb routing, SCSS i components standalone, sense SSR.
+- Carpetes components, services, models i pages creades amb .gitkeep.
+- Repositori públic amb les cinc branques obligatòries.
+- Pàgina inicial personalitzada amb el text Projecte base llest.
+- Actualització automàtica comprovada.
 
-```bash
-ng generate component component-name
-```
+Els canvis de l'EAC1 es fan a la branca ra1-setup.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Enllaç del repositori
 
-```bash
-ng generate --help
-```
+[Repositori públic](https://github.com/rubiobdiego/ioc-angular-gestor-reformes-diego-rubio)
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+[Branca ra1-setup](https://github.com/rubiobdiego/ioc-angular-gestor-reformes-diego-rubio/tree/ra1-setup)
