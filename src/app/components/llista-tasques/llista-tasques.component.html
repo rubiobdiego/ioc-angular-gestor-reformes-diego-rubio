@@ -1,0 +1,9 @@
+<div class="llista">
+  @for (tasca of tasques; track tasca.id) {
+    <app-targeta-tasca
+      [tasca]="tasca"
+      [seleccionada]="tasca.id === idSeleccionat"
+      (seleccionar)="seleccionar.emit($event)"
+    />
+  }
+</div>

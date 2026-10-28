@@ -2,30 +2,32 @@
   <header>
     <h1>{{ nomAplicacio }}</h1>
     <p>
-      Diego Rubio — Aplicació per organitzar les tasques
-      i fer el seguiment de les reformes.
+      Diego Alexander Rubio Beltran — Gestió de tasques de reformes.
     </p>
   </header>
 
-  <div class="blocs">
-    <section class="targeta">
-      <h2>Dades del projecte</h2>
-      <p><strong>Autor:</strong> Diego Rubio</p>
-      <p><strong>Mòdul:</strong> Programació avançada</p>
-      <p><strong>Unitat:</strong> Preparació de l'entorn de desenvolupament</p>
-      <p><strong>Tecnologia:</strong> Angular amb TypeScript i SCSS</p>
-      <p><strong>Estat:</strong> Projecte base llest</p>
-    </section>
+  <app-filtres-tasques
+    (aplicarFiltres)="aplicarFiltres($event)"
+    (restablirFiltres)="restablirFiltres()"
+  />
 
-    <aside>
-      <h2>Nota</h2>
-      <p>
-         Actualització automàtica comprovada.
-         En les properes unitats afegiré funcionalitats
-         per gestionar les tasques de les reformes.
-      </p>
-    </aside>
-  </div>
+  <section aria-labelledby="titol-tasques">
+    <h2 id="titol-tasques">Tasques de la reforma</h2>
+
+    <p role="status">
+      @if (tascaSeleccionada) {
+        Tasca seleccionada: {{ tascaSeleccionada.titol }}
+      } @else {
+        Selecciona una tasca per consultar-la.
+      }
+    </p>
+
+    <app-llista-tasques
+      [tasques]="tasquesVisibles"
+      [idSeleccionat]="tascaSeleccionada?.id ?? null"
+      (seleccionar)="seleccionarTasca($event)"
+    />
+  </section>
 </main>
 
 <router-outlet />

@@ -1,0 +1,73 @@
+.filtres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 16px;
+  border: 1px solid #d6dfe8;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.camp {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border: 1px solid #64748b;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.accions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+button {
+  padding: 8px 12px;
+  border: 1px solid #235789;
+  border-radius: 4px;
+  background-color: #235789;
+  color: white;
+  font: inherit;
+  cursor: pointer;
+}
+
+.secundari {
+  background-color: white;
+  color: #235789;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input:focus-visible,
+select:focus-visible,
+button:focus-visible {
+  outline: 3px solid #b35b00;
+  outline-offset: 3px;
+}
+
+.ajuda {
+  font-size: 0.9rem;
+}
+
+.error {
+  color: #b3261e;
+}

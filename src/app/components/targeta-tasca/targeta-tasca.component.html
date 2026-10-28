@@ -1,0 +1,21 @@
+<article class="targeta" [class.seleccionada]="seleccionada">
+  <app-etiqueta-categoria [categoria]="tasca.categoria" />
+
+  <h3>{{ tasca.titol }}</h3>
+  <p>{{ tasca.descripcio }}</p>
+
+  <p>Data prevista: {{ tasca.dataPrevista | date:'dd/MM/yyyy' }}</p>
+  <p>Hores estimades: {{ tasca.horesEstimades }}</p>
+
+  @if (tasca.destacada) {
+    <p class="destacada">Tasca destacada</p>
+  }
+
+  <button
+    type="button"
+    [attr.aria-pressed]="seleccionada"
+    (click)="seleccionar.emit(tasca)"
+  >
+    Seleccionar tasca
+  </button>
+</article>
