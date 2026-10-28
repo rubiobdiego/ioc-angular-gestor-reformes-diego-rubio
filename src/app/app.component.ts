@@ -5,10 +5,12 @@ import { FiltresTasquesComponent } from './components/filtres-tasques/filtres-ta
 import type { FiltresTasques } from './components/filtres-tasques/filtres-tasques.component';
 import { TASQUES_MOCK } from './mocks/tasques.mock';
 import type { Tasca } from './models/tasca.model';
+import { DatePipe } from '@angular/common';
 
 @Component({
   imports: [
     RouterOutlet,
+    DatePipe,
     LlistaTasquesComponent,
     FiltresTasquesComponent,
   ],

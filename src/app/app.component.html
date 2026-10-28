@@ -1,4 +1,12 @@
-<main class="contenidor">
+<a class="salt-contingut" href="#contingut-principal">
+  Saltar al contingut principal
+</a>
+
+<main
+  id="contingut-principal"
+  class="contenidor"
+  tabindex="-1"
+>
   <header>
     <h1>{{ nomAplicacio }}</h1>
     <p>
@@ -11,23 +19,58 @@
     (restablirFiltres)="restablirFiltres()"
   />
 
-  <section aria-labelledby="titol-tasques">
-    <h2 id="titol-tasques">Tasques de la reforma</h2>
+  <div class="distribucio">
+    <section aria-labelledby="titol-tasques">
+      <h2 id="titol-tasques">Tasques de la reforma</h2>
 
-    <p role="status">
-      @if (tascaSeleccionada) {
-        Tasca seleccionada: {{ tascaSeleccionada.titol }}
+      <p class="comptador" role="status">
+        Resultats: {{ tasquesVisibles.length }} de {{ tasques.length }}
+      </p>
+
+      @if (tasquesVisibles.length > 0) {
+        <app-llista-tasques
+          [tasques]="tasquesVisibles"
+          [idSeleccionat]="tascaSeleccionada?.id ?? null"
+          (seleccionar)="seleccionarTasca($event)"
+        />
       } @else {
-        Selecciona una tasca per consultar-la.
+        <p class="sense-resultats">
+          No s'han trobat tasques amb aquests filtres.
+        </p>
       }
-    </p>
+    </section>
 
-    <app-llista-tasques
-      [tasques]="tasquesVisibles"
-      [idSeleccionat]="tascaSeleccionada?.id ?? null"
-      (seleccionar)="seleccionarTasca($event)"
-    />
-  </section>
+    <aside
+      class="detall"
+      aria-labelledby="titol-detall"
+      aria-live="polite"
+    >
+      <h2 id="titol-detall">Detall de la tasca</h2>
+
+      @if (tascaSeleccionada; as tasca) {
+        <h3>{{ tasca.titol }}</h3>
+
+        <p>{{ tasca.descripcio }}</p>
+
+        <dl>
+          <dt>Categoria</dt>
+          <dd>{{ tasca.categoria }}</dd>
+
+          <dt>Data prevista</dt>
+          <dd>{{ tasca.dataPrevista | date:'dd/MM/yyyy' }}</dd>
+
+          <dt>Hores estimades</dt>
+          <dd>{{ tasca.horesEstimades }}</dd>
+        </dl>
+
+        @if (tasca.destacada) {
+          <p class="destacada">Tasca destacada</p>
+        }
+      } @else {
+        <p>Selecciona una tasca per consultar-ne el detall.</p>
+      }
+    </aside>
+  </div>
 </main>
 
 <router-outlet />
