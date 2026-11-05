@@ -1,0 +1,102 @@
+{
+  "tasques": [
+    {
+      "id": 1,
+      "nom": " Protegir paviments i mobles ",
+      "descripcio": "Cobrir les zones de pas abans de començar la reforma.",
+      "categoria": " preparacio ",
+      "data_prevista": "2026-11-02",
+      "estat": "completada",
+      "hores_estimades": " 2 "
+    },
+    {
+      "id": 2,
+      "nom": "Retirar rajoles del bany",
+      "descripcio": "Retirar les rajoles antigues de les parets del bany.",
+      "categoria": "PREPARACIO",
+      "data_prevista": "2026-11-03",
+      "estat": "en_curs",
+      "hores_estimades": 8,
+      "destacada": true
+    },
+    {
+      "id": 3,
+      "nom": "Enderrocar envà interior",
+      "descripcio": "Retirar un envà per ampliar la zona de la cuina.",
+      "categoria": "preparacio",
+      "data_prevista": "2026-11-04",
+      "estat": "pendent",
+      "hores_estimades": "6",
+      "destacada": false
+    },
+    {
+      "id": 4,
+      "nom": "Renovar cablejat elèctric",
+      "descripcio": "Substituir el cablejat i revisar els circuits.",
+      "categoria": "installacions",
+      "data_prevista": "2026-11-05",
+      "estat": "en_curs",
+      "hores_estimades": "12",
+      "destacada": true
+    },
+    {
+      "id": 5,
+      "nom": "Instal·lar punts de llum",
+      "descripcio": "Preparar connexions per als nous punts de llum.",
+      "categoria": "installacions",
+      "data_prevista": "2026-11-06",
+      "estat": "pendent",
+      "hores_estimades": 4
+    },
+    {
+      "id": 6,
+      "nom": "Renovar canonades",
+      "descripcio": "Canviar les canonades del bany i de la cuina.",
+      "categoria": "installacions",
+      "data_prevista": "2026-11-09",
+      "estat": "pendent",
+      "hores_estimades": "10",
+      "destacada": false
+    },
+    {
+      "id": 7,
+      "nom": "Col·locar paviment ceràmic",
+      "descripcio": "Col·locar les rajoles del nou paviment.",
+      "categoria": "acabats",
+      "data_prevista": "2026-11-10",
+      "estat": "pendent",
+      "hores_estimades": "16",
+      "destacada": true
+    },
+    {
+      "id": 8,
+      "nom": "Pintar parets i sostres",
+      "descripcio": "Preparar les superfícies i aplicar la pintura.",
+      "categoria": "ACABATS",
+      "data_prevista": "2026-11-11",
+      "estat": "pendent",
+      "hores_estimades": 12,
+      "destacada": false
+    },
+    {
+      "id": 9,
+      "nom": "Muntar portes interiors",
+      "descripcio": "Col·locar les portes i ajustar els marcs.",
+      "categoria": "acabats",
+      "data_prevista": "2026-11-12",
+      "estat": "pendent",
+      "hores_estimades": "6",
+      "destacada": false
+    },
+    {
+      "id": 10,
+      "nom": "Segellar juntes del bany",
+      "descripcio": "Segellar les juntes de la dutxa i del rentamans.",
+      "categoria": " acabats ",
+      "data_prevista": "2026-11-13",
+      "estat": "pendent",
+      "hores_estimades": "3",
+      "destacada": false
+    }
+  ]
+}

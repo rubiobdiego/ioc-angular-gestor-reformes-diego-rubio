@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { DatePipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { LlistaTasquesComponent } from './components/llista-tasques/llista-tasques.component';
 import { FiltresTasquesComponent } from './components/filtres-tasques/filtres-tasques.component';
 import type { FiltresTasques } from './components/filtres-tasques/filtres-tasques.component';
+import { TasquesService } from './services/tasques.service';
 import { TASQUES_MOCK } from './mocks/tasques.mock';
 import type { Tasca } from './models/tasca.model';
-import { DatePipe } from '@angular/common';
 
 @Component({
   imports: [
@@ -19,6 +20,8 @@ import { DatePipe } from '@angular/common';
   templateUrl: './app.component.html',
 })
 export class App {
+  public readonly serveiTasques = inject(TasquesService);
+
   public readonly nomAplicacio = 'Gestor de Reformes';
   public readonly tasques = TASQUES_MOCK;
 
